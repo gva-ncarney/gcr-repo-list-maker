@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/product.schema.json",
+    "name": "name",
+    "resource_uri": "resource_uri",
+    "kind": "object",
+    "create_time": {
+        "seconds": "seconds",
+        "nanos": "nanos"
+    },
+    "update_time": {
+        "seconds": "seconds",
+        "nanos": "nanos"
+    },
+    "attestation": {
+        "serialized_payload": "serialized_payload",
+        "signatures": {
+            "signature": "signature",
+            "public_key_id": "public_key_id"
+        },
+        "vulnerability": {
+            "severity": "severity",
+            "cvss_score:": "cvss_score",
+            "package_issue": {
+                "affected_cpe_uri": "affected_cpe_uri",
+                "affected_package": "affected_package",
+                "affected_version": {
+                    "name": "name",
+                    "kind": "kind",
+                    "full_name": "full_name"
+                },
+                "fixed_cpe_uri": "fixed_cpe_uri",
+                "fixed_package": "fixed_package",
+                "fixed_version": {
+                    "name": "name",
+                    "kind": "kind",
+                    "full_name": "full_name"
+                },
+                "fix_available": true
+            },
+            "effective_severity": "effective_severity",
+            "fix_available": true
+        }
+    }
+}
