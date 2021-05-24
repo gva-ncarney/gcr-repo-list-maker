@@ -1,0 +1,17 @@
+name: template-sync
+
+on: push
+
+jobs:
+  template-sync:
+    timeout-minutes: 20
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-workflow-run-wait@v1 # wait for workflow_run to be successful
+      - uses: ahmadnassri/action-workflow-queue@v1 # avoid conflicts, by running this template one at a time
+      - uses: ahmadnassri/action-template-repository-sync@v1
+        with:
+          github-token: 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
